@@ -2,6 +2,7 @@
 {
     public class Course
     {
+        // testing
         public string CourseName { get; set; }
         public string CourseNumber { get; set; }
         public string CourseDepartment { get; set; }
