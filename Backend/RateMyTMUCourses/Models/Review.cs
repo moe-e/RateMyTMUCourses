@@ -2,21 +2,21 @@
 {
     public class Review
     {
-        public int ReviewId { get; set; }
-        public string CourseName { get; set; }
+        public int Id { get; set; }
         public string CourseNumber { get; set; }
-        public float Quality { get; set; }
-        public float Difficulty { get; set; }
+        public string ProfessorName { get; set; }
         public string Description { get; set; }
         public string FinalGrade { get; set; }
-        public string DatePosted { get; set; }
+        public float Quality { get; set; }
+        public float Difficulty { get; set; }
+        public DateTime DatePosted { get; set; }
 
 
-        public Review(int ReviewId, string CourseName, string CourseNumber, float Quality, float Difficulty, string Description, string FinalGrade, string DatePosted)
+        public Review(int Id,  string CourseNumber, string ProfessorName, string Description, string FinalGrade, float Quality, float Difficulty, DateTime DatePosted)
         {
-            this.ReviewId = ReviewId;
-            this.CourseName = CourseName;
+            this.Id = Id;
             this.CourseNumber = CourseNumber;
+            this.ProfessorName = ProfessorName;
             this.Quality = Quality;
             this.Difficulty = Difficulty;
             this.Description = Description;

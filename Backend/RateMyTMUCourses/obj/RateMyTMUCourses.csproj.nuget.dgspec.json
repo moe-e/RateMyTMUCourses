@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyCoursesTMU\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj": {}
+    "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyCoursesTMU\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj": {
+    "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyCoursesTMU\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
+        "projectUniqueName": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
         "projectName": "RateMyTMUCourses",
-        "projectPath": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyCoursesTMU\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
+        "projectPath": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
         "packagesPath": "C:\\Users\\Melha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyCoursesTMU\\Backend\\RateMyTMUCourses\\obj\\",
+        "outputPath": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Melha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,12 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.7, )"
             },
