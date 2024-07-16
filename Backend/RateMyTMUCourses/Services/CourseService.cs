@@ -18,13 +18,13 @@ namespace RateMyTMUCourses.Services
             _context.SaveChanges();
         }
 
-        public void UpdateCourse(int courseId)
+        public void UpdateCourse(int courseId, Course updatedCourse)
         {
-            var course = _context.Courses.Find(courseId);
+            var currentCourse = _context.Courses.Find(courseId);
 
-            if (course != null)
+            if (currentCourse != null)
             {
-                course.CourseName = "new";
+                currentCourse = updatedCourse;
                 _context.SaveChanges();
             }
 
@@ -42,7 +42,7 @@ namespace RateMyTMUCourses.Services
 
         }
 
-        public List<Course> GetCourses()
+        public ICollection<Course> GetCourses()
         {
             var courses = _context.Courses.ToList();
             return courses;

@@ -1,56 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RateMyTMUCourses.Data;
 using RateMyTMUCourses.Models;
+using RateMyTMUCourses.Services;
 
 namespace RateMyTMUCourses.Controllers
 {
     [ApiController]
-    [Route("api/courses")]
+    [Route("api/Course")]
     public class CourseController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly CourseService _courseService;
         
-        public CourseController(AppDbContext context) 
+        public CourseController(CourseService service)
         {
-            _context = context;
+            _courseService = service;
         }
 
+        public List<Course> Index()
+        {
+            return _courseService.GetCourses().ToList();
+        }
 
         public void InsertCourse(Course course)
         {
-            _context.Courses.Add(course);
-            _context.SaveChanges();
+            _courseService.InsertCourse(course);
         }
 
-        public void UpdateCourse(int courseId)
+        public void UpdateCourse(int courseId, Course newCourse)
         {
-            var course = _context.Courses.Find(courseId);
-
-            if (course != null)
-            {
-                course.CourseName = "new";
-            }
-
-            _context.SaveChanges();
+            _courseService.UpdateCourse(courseId, newCourse);
 
         }
 
         public void DeleteCourse(int courseId) 
         {
-            var course = _context.Courses.Find(courseId);
-
-            if (course != null)
-            {
-                _context.Courses.Remove(course);
-                _context.SaveChanges();
-            }
+            _courseService.DeleteCourse(courseId);
 
         }
 
-        public List<Course> GetCourses()
-        {
-            var courses = _context.Courses.ToList();
-            return courses;
-        }
+        
     }
 }
