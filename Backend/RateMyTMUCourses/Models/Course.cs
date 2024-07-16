@@ -3,7 +3,6 @@
     public class Course
     {
         public int Id { get; set; }
-        public string CourseName { get; set; }
         public string CourseNumber { get; set; }
         public string CourseDepartment { get; set; }
         public string CourseName { get; set; }
@@ -12,11 +11,8 @@
         public string CourseAntirequisites { get; set; }
         public float CourseRating { get; set; }
         public float CourseDifficulty { get; set; }
-        public List<Review>? CourseReviews { get; set; }
         public int NumberOfReviews { get; set; }
-
-
-
+        public ICollection<Review>? Reviews { get; set; }
 
         public Course(int Id, string CourseNumber, string CourseDepartment, string CourseName,  string CourseDescription, string CoursePrerequisites, string CourseAntirequisites)
         {

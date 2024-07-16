@@ -4,3 +4,5 @@
 
 /Backend/RateMyTMUCourses/.vs/RateMyTMUCourses/FileContentIndex/67bd6f4c-1c06-47c1-be23-ccdafbc95753.vsidx
 /Backend/RateMyTMUCourses/.vs/RateMyTMUCourses/FileContentIndex
+*.dll
+*.pdb
