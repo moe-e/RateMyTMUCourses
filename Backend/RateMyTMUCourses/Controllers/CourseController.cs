@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using RateMyTMUCourses.Data;
 using RateMyTMUCourses.Models;
 using RateMyTMUCourses.Services;
@@ -16,28 +17,33 @@ namespace RateMyTMUCourses.Controllers
             _courseService = service;
         }
 
-        public List<Course> Index()
+        [HttpGet]
+        public ActionResult<ICollection<Course>> GetCourses()
         {
-            return _courseService.GetCourses().ToList();
+            var courses = _courseService.GetCourses().ToList();
+            return Ok(courses);
         }
 
-        public void InsertCourse(Course course)
+        [HttpPost]
+        public ActionResult InsertCourse([FromBody] Course course)
         {
             _courseService.InsertCourse(course);
+            return Ok();
         }
 
-        public void UpdateCourse(int courseId, Course newCourse)
+        [HttpPut("{courseId}")]
+        public ActionResult UpdateCourse(int courseId, [FromBody] Course newCourse)
         {
             _courseService.UpdateCourse(courseId, newCourse);
-
+            return Ok();
         }
 
-        public void DeleteCourse(int courseId) 
+        [HttpDelete("{courseId}")]
+        public ActionResult DeleteCourse(int courseId) 
         {
             _courseService.DeleteCourse(courseId);
-
+            return Ok();
         }
 
-        
     }
 }
