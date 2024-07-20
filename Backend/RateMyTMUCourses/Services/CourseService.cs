@@ -42,6 +42,12 @@ namespace RateMyTMUCourses.Services
 
         }
 
+        public Course getCourse(string courseId)
+        {
+            var course = _context.Courses.Find(courseId);
+            return course;
+        }
+
         public ICollection<Course> GetCourses()
         {
             var courses = _context.Courses.ToList();

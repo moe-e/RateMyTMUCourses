@@ -24,11 +24,8 @@ namespace RateMyTMUCourses.Migrations
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Course", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("CourseId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CourseAntirequisites")
                         .IsRequired()
@@ -49,10 +46,6 @@ namespace RateMyTMUCourses.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CourseNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CoursePrerequisites")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -63,9 +56,9 @@ namespace RateMyTMUCourses.Migrations
                     b.Property<int>("NumberOfReviews")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("CourseId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Review", b =>
@@ -76,8 +69,8 @@ namespace RateMyTMUCourses.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
+                    b.Property<string>("CourseId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DatePosted")
                         .HasColumnType("datetime2");
@@ -100,20 +93,22 @@ namespace RateMyTMUCourses.Migrations
                     b.Property<float>("Quality")
                         .HasColumnType("real");
 
+                    b.Property<string>("ReviewCourseId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Review", b =>
                 {
                     b.HasOne("RateMyTMUCourses.Models.Course", null)
                         .WithMany("Reviews")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CourseId");
                 });
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Course", b =>

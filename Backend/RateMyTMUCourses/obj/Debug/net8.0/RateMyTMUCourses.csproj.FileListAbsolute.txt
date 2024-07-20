@@ -1,6 +1,5 @@
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\appsettings.json
-C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\RateMyTMUCourses.staticwebassets.runtime.json
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\RateMyTMUCourses.exe
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\RateMyTMUCourses.deps.json
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\RateMyTMUCourses.runtimeconfig.json
@@ -116,8 +115,6 @@ C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.AssemblyInfo.cs
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.csproj.CoreCompileInputs.cache
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.RazorAssemblyInfo.cache
-C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.RazorAssemblyInfo.cs
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.sourcelink.json
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\staticwebassets.development.json
@@ -126,12 +123,15 @@ C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RateMyTMUCourses.props
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RateMyTMUCourses.props
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\scopedcss\bundle\RateMyTMUCourses.styles.css
-C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\scopedcss\projectbundle\RateMyTMUCourses.bundle.scp.css
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTM.3757C89A.Up2Date
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\refint\RateMyTMUCourses.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.pdb
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\RateMyTMUCourses.genruntimeconfig.cache
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\obj\Debug\net8.0\ref\RateMyTMUCourses.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\WebDriver.dll

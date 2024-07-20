@@ -2,8 +2,7 @@
 {
     public class Course
     {
-        public int Id { get; set; }
-        public string CourseNumber { get; set; }
+        public string CourseId { get; set; }
         public string CourseDepartment { get; set; }
         public string CourseName { get; set; }
         public string CourseDescription { get; set; }
@@ -14,10 +13,9 @@
         public int NumberOfReviews { get; set; }
         public ICollection<Review>? Reviews { get; set; }
 
-        public Course(int Id, string CourseNumber, string CourseDepartment, string CourseName,  string CourseDescription, string CoursePrerequisites, string CourseAntirequisites)
+        public Course(string CourseId, string CourseDepartment, string CourseName,  string CourseDescription, string CoursePrerequisites, string CourseAntirequisites)
         {
-            this.Id = Id;
-            this.CourseNumber = CourseNumber;
+            this.CourseId = CourseId;
             this.CourseDepartment = CourseDepartment;
             this.CourseName = CourseName;
             this.CourseDescription = CourseDescription;
