@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RateMyTMUCourses.Data;
 
@@ -11,9 +12,11 @@ using RateMyTMUCourses.Data;
 namespace RateMyTMUCourses.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240721061403_UpdatedMigration")]
+    partial class UpdatedMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,11 +66,11 @@ namespace RateMyTMUCourses.Migrations
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Review", b =>
                 {
-                    b.Property<int>("ReviewId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CourseId")
                         .IsRequired()
@@ -94,7 +97,7 @@ namespace RateMyTMUCourses.Migrations
                     b.Property<float>("Quality")
                         .HasColumnType("real");
 
-                    b.HasKey("ReviewId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 

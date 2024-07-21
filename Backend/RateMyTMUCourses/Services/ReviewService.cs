@@ -44,14 +44,14 @@ namespace RateMyTMUCourses.Services
 
         public ICollection<Review> GetReviewsForCourse(string courseId)
         {
-            var reviews= _context.Reviews.Where(review => review.ReviewCourseId == courseId).ToList();
+            var reviews = _context.Reviews.Where(review => review.CourseId == courseId).ToList();
             return reviews;
         }
 
         public ICollection<Review> GetAllReviews()
         {
-            var courses = _context.Reviews.ToList();
-            return courses;
+            var reviews = _context.Reviews.ToList();
+            return reviews;
         }
 
     }

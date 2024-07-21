@@ -4,8 +4,8 @@ namespace RateMyTMUCourses.Models
 {
     public class Review
     {
-        public int Id { get; set; }
-        public string ReviewCourseId { get; set; }
+        public int ReviewId { get; set; }
+        public string CourseId { get; set; }
         public string ProfessorName { get; set; }
         public string Description { get; set; }
         public string FinalGrade { get; set; }
@@ -14,9 +14,9 @@ namespace RateMyTMUCourses.Models
         public DateTime DatePosted { get; set; }
 
 
-        public Review(string ReviewCourseId, string ProfessorName, string Description, string FinalGrade, float Quality, float Difficulty, DateTime DatePosted)
+        public Review(string CourseId, string ProfessorName, string Description, string FinalGrade, float Quality, float Difficulty, DateTime DatePosted)
         {
-            this.ReviewCourseId = ReviewCourseId;
+            this.CourseId = CourseId;
             this.ProfessorName = ProfessorName;
             this.Quality = Quality;
             this.Difficulty = Difficulty;

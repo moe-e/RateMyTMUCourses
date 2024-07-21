@@ -12,8 +12,8 @@ using RateMyTMUCourses.Data;
 namespace RateMyTMUCourses.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240720042334_updatedCourse")]
-    partial class updatedCourse
+    [Migration("20240721061931_UpdatedReviewId")]
+    partial class UpdatedReviewId
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,13 +66,14 @@ namespace RateMyTMUCourses.Migrations
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Review", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
 
                     b.Property<string>("CourseId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DatePosted")
@@ -96,11 +97,7 @@ namespace RateMyTMUCourses.Migrations
                     b.Property<float>("Quality")
                         .HasColumnType("real");
 
-                    b.Property<string>("ReviewCourseId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
+                    b.HasKey("ReviewId");
 
                     b.HasIndex("CourseId");
 
@@ -111,7 +108,9 @@ namespace RateMyTMUCourses.Migrations
                 {
                     b.HasOne("RateMyTMUCourses.Models.Course", null)
                         .WithMany("Reviews")
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("RateMyTMUCourses.Models.Course", b =>

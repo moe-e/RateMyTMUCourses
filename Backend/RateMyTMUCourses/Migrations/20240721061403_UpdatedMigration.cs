@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RateMyTMUCourses.Migrations
 {
     /// <inheritdoc />
-    public partial class updatedCourse : Migration
+    public partial class UpdatedMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,24 +36,29 @@ namespace RateMyTMUCourses.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ReviewCourseId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CourseId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProfessorName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FinalGrade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quality = table.Column<float>(type: "real", nullable: false),
                     Difficulty = table.Column<float>(type: "real", nullable: false),
-                    DatePosted = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DatePosted = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reviews", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reviews_Courses_ReviewCourseId",
-                        column: x => x.ReviewCourseId,
+                        name: "FK_Reviews_Courses_CourseId",
+                        column: x => x.CourseId,
                         principalTable: "Courses",
-                        principalColumn: "CourseId");
+                        principalColumn: "CourseId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_CourseId",
+                table: "Reviews",
+                column: "CourseId");
         }
 
         /// <inheritdoc />
