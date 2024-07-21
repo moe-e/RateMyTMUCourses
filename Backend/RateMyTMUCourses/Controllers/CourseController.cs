@@ -24,6 +24,13 @@ namespace RateMyTMUCourses.Controllers
             return Ok(courses);
         }
 
+        [HttpGet("{courseId}")]
+        public ActionResult<ICollection<Course>> GetCourse(string courseId)
+        {
+            var course = _courseService.GetCourse(courseId);
+            return Ok(course);
+        }
+
         [HttpPost]
         public ActionResult InsertCourse([FromBody] Course course)
         {
@@ -32,14 +39,14 @@ namespace RateMyTMUCourses.Controllers
         }
 
         [HttpPut("{courseId}")]
-        public ActionResult UpdateCourse(int courseId, [FromBody] Course newCourse)
+        public ActionResult UpdateCourse(string courseId, [FromBody] Course newCourse)
         {
             _courseService.UpdateCourse(courseId, newCourse);
             return Ok();
         }
 
         [HttpDelete("{courseId}")]
-        public ActionResult DeleteCourse(int courseId) 
+        public ActionResult DeleteCourse(string courseId) 
         {
             _courseService.DeleteCourse(courseId);
             return Ok();

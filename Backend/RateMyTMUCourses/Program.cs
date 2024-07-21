@@ -25,11 +25,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-using (var scope = app.Services.CreateScope())
-{
-    var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
-    scraperService.addCourses(); // Assuming this method is synchronous
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
+//    scraperService.addCourses(); // Assuming this method is synchronous
+//}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

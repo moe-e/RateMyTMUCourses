@@ -9,12 +9,16 @@ namespace RateMyTMUCourses.Services
     public class CourseScraperService
     {
         private readonly CourseService _courseService;
-        private readonly ChromeDriver _driver;
+        private readonly ChromeDriver _departmentsDriver;
+        private readonly ChromeDriver _departmentCoursesDriver;
+        private readonly ChromeDriver _coursesDriver;
 
         public CourseScraperService(CourseService courseService)
         {
             _courseService = courseService;
-            _driver = new ChromeDriver();
+            _departmentsDriver = new ChromeDriver();
+            _departmentCoursesDriver = new ChromeDriver();
+            _coursesDriver = new ChromeDriver();
         }
 
         public void addCourses()
@@ -22,9 +26,13 @@ namespace RateMyTMUCourses.Services
             ICollection<Course> courses = new HashSet<Course>();
             scrapeDepartments(courses);
 
-            foreach(var course in courses)
+            _departmentsDriver.Close();
+            _departmentCoursesDriver.Close();
+            _coursesDriver.Close();
+
+            foreach (var course in courses)
             {
-                //_courseService.InsertCourse(course);
+                _courseService.InsertCourse(course);
             }
 
         }
@@ -33,14 +41,13 @@ namespace RateMyTMUCourses.Services
         {
             string departmentsUrl = "https://www.torontomu.ca/calendar/2023-2024/courses/";
 
-            var driver = new ChromeDriver();
-            driver.Url = departmentsUrl;
+            _departmentsDriver.Url = departmentsUrl;
 
-            var departments = driver.FindElements(By.ClassName("sorting_1"));
+            var departments = _departmentsDriver.FindElements(By.ClassName("sorting_1"));
 
             foreach (var department in departments)
             {
-                IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+                IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)_departmentsDriver;
                 var firstChild = jsExecutor.ExecuteScript("return arguments[0].firstChild;", department);
                 IWebElement firstChildElement = (IWebElement)firstChild;
 
@@ -48,16 +55,13 @@ namespace RateMyTMUCourses.Services
                 scrapeDepartmentCourses(departmentLink, courses);
             }
 
-            driver.Quit();
-
         }
 
         private void scrapeDepartmentCourses(string departmentlink, ICollection<Course> courses)
         {
-            var driver = new ChromeDriver();
-            driver.Url = departmentlink;
+            _departmentCoursesDriver.Url = departmentlink;
 
-            var departmentCourses = driver.FindElements(By.ClassName("courseCode"));
+            var departmentCourses = _departmentCoursesDriver.FindElements(By.ClassName("courseCode"));
 
             foreach (var course in departmentCourses)
             {
@@ -69,11 +73,11 @@ namespace RateMyTMUCourses.Services
 
         private void scrapeCourse(string courseLink, ICollection<Course> courses)
         {
-            _driver.Url = courseLink;
+            _coursesDriver.Url = courseLink;
 
             // Logic to parse course number and name
-            var courseHeaderInfo = _driver.FindElement(By.ClassName("resCalendarCourseEmbed"));
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)_driver;
+            var courseHeaderInfo = _coursesDriver.FindElement(By.ClassName("resCalendarCourseEmbed"));
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)_coursesDriver;
             var courseNumberChild = jsExecutor.ExecuteScript("return arguments[0].children[0];", courseHeaderInfo);
             var courseNameChild = jsExecutor.ExecuteScript("return arguments[0].children[1];", courseHeaderInfo);
             IWebElement courseNumberChildElement = (IWebElement)courseNumberChild;
@@ -83,10 +87,10 @@ namespace RateMyTMUCourses.Services
             var courseDepartment = courseNumber.Split(" ")[0];
             var courseName = courseNameChildElement.GetAttribute("innerText");
 
-            var courseDescription = _driver.FindElement(By.ClassName("courseDescription")).Text;
+            var courseDescription = _coursesDriver.FindElement(By.ClassName("courseDescription")).Text;
 
             // Logic to parse the pre and anti requisites
-            var courseRequisitesClass = _driver.FindElements(By.ClassName("requisites"));
+            var courseRequisitesClass = _coursesDriver.FindElements(By.ClassName("requisites"));
             var preRequisitesChild = jsExecutor.ExecuteScript("return arguments[0].children[1];", courseRequisitesClass[0]);
             var antiRequisitesChild = jsExecutor.ExecuteScript("return arguments[0].children[1];", courseRequisitesClass[2]);
             IWebElement preRequisitesChildElement = (IWebElement)preRequisitesChild;

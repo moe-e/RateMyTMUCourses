@@ -18,7 +18,7 @@ namespace RateMyTMUCourses.Services
             _context.SaveChanges();
         }
 
-        public void UpdateCourse(int courseId, Course updatedCourse)
+        public void UpdateCourse(string courseId, Course updatedCourse)
         {
             var currentCourse = _context.Courses.Find(courseId);
 
@@ -30,7 +30,7 @@ namespace RateMyTMUCourses.Services
 
         }
 
-        public void DeleteCourse(int courseId)
+        public void DeleteCourse(string courseId)
         {
             var course = _context.Courses.Find(courseId);
 
@@ -42,7 +42,7 @@ namespace RateMyTMUCourses.Services
 
         }
 
-        public Course getCourse(string courseId)
+        public Course GetCourse(string courseId)
         {
             var course = _context.Courses.Find(courseId);
             return course;
