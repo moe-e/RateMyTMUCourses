@@ -32,11 +32,11 @@ namespace RateMyTMUCourses.Services
 
         public void DeleteReview(int reviewId)
         {
-            var review = _context.Courses.Find(reviewId);
+            var review = _context.Reviews.Find(reviewId);
 
             if (review != null)
             {
-                _context.Courses.Remove(review);
+                _context.Reviews.Remove(review);
                 _context.SaveChanges();
             }
 
