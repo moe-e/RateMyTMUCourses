@@ -14,9 +14,8 @@ namespace RateMyTMUCourses.Models
         public DateTime DatePosted { get; set; }
 
 
-        public Review(int Id, string ReviewCourseId, string ProfessorName, string Description, string FinalGrade, float Quality, float Difficulty, DateTime DatePosted)
+        public Review(string ReviewCourseId, string ProfessorName, string Description, string FinalGrade, float Quality, float Difficulty, DateTime DatePosted)
         {
-            this.Id = Id;
             this.ReviewCourseId = ReviewCourseId;
             this.ProfessorName = ProfessorName;
             this.Quality = Quality;
