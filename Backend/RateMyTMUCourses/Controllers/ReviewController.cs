@@ -16,7 +16,6 @@ namespace RateMyTMUCourses.Controllers
             _reviewService = reviewService;
         }
 
-
         [HttpGet]
         public ActionResult<ICollection<Review>> GetAllReviews()
         {

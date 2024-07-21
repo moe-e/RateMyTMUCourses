@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<CourseService>();
+builder.Services.AddTransient<ReviewService>();
 builder.Services.AddTransient<CourseScraperService>();
 
 var app = builder.Build();

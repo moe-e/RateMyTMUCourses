@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RateMyTMUCourses")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4a23729ee21946af00cf821a6543adaff5bc5af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2382e7dbd3323b7d8f14abac8ad98a11ab157bb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RateMyTMUCourses")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RateMyTMUCourses")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
