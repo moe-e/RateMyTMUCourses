@@ -1,0 +1,29 @@
+.aboutContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+}
+
+.aboutContainer .pageTitle{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.aboutPage{
+    max-width: 800px;
+    margin: 10px ;
+    color:#282936dd;
+    /* This centers the div and maintains the top margin */
+}
+
+.aboutPage .titleHeader{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.aboutPage .description{
+    font-size: 20px;
+    font-weight: 300;
+}

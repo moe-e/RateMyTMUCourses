@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './Body.css'
+import { NavLink, Link } from 'react-router-dom';
+import './Home.css'
 
 //  <a className="exploreLink" href="#">or explore all courses →</a>
 
@@ -16,9 +17,13 @@ function Body (){
 
             <button class="learn-more">
                 <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
+                    <span class="icon arrow"></span>
                 </span>
-                <span class="button-text">or explore all courses</span>
+
+                <Link to="/explore">
+                    <span class="button-text">or explore all courses</span>
+                </Link>
+                
             </button>
            
         </div>

@@ -9,9 +9,21 @@
 
 .tab-options {
     display: flex;
-    gap: 40px; /* Space between the tabs */
+    gap: 27px; /* Space between the tabs */
     flex: 1; /* This makes the tab options take up available space */
-    justify-content: center; /* Center the tabs horizontally */
+    justify-content: right; /* Center the tabs horizontally */
+}
+
+.tab-options .option{
+    color:#282936dd;
+    text-decoration: none;
+}
+
+.tab-options .active{
+    text-decoration: underline; 
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: rgb(216, 8, 8);
+    text-underline-offset: 5px;
 }
 
 .tab-options .option:hover {
@@ -30,10 +42,8 @@
 }
 
 .rightSide{
-    padding-right: 30px;
-    display: flex;
-    gap: 10px; /* Space between the tabs */
-    justify-content: center; 
+    padding-right: 20px;
+    margin-left: 27px;
 }
 
 .darkMode {
@@ -52,11 +62,11 @@
 
 .login {
     font: inherit;
-    height:34px;
+    height:30px;
     background-color: #282936;
     color: rgb(255, 255, 255);
     border-radius: .3rem;
-    font-size: 15px;
+    font-size: 14px;
     padding: 0.375em 0.7em;
     font-weight: 500;
     transition: 0.15s ease;

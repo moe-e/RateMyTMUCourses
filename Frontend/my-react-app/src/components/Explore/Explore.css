@@ -1,0 +1,88 @@
+.explore .header{
+    display: flex;
+    flex-direction: column;
+}
+
+.explore .header .title{
+    font-size: 50px;
+    color: #000;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.explore .header .description{
+    margin-top: -20px;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    color: #656262;
+    font-weight:500;
+}
+
+.explore .searchingContainer{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.courseSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 600px;
+}
+
+.courseSearch .searchBox {
+    width: 100%; /* Set width of the searchBox container */
+    max-width: 800px;
+    margin-bottom: 30px;
+
+}
+
+.courseSearch .searchBox input{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding-left: 50px; /* Provides space for the icon inside the input box */
+    border: 1px solid #ccc; /* Optional: adds a border around the input */
+    border-radius: 10px;
+    background-color: rgba(226, 232, 240, 0.864);
+}
+
+.searchIcon{
+    position: absolute; /* Position the icon relative to the 'searchBox' */
+    left: 20px; /* Distance from the left edge of the 'searchBox' */
+    color: #747272; /* Color of the icon, adjust as needed */
+    font-size:17px; 
+}
+
+.sortOption .selector{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.removeIcon{
+    color: #747272; /* Color of the icon, adjust as needed */
+    font-size:20px; 
+}
+
+.courseSearch .sortOption{
+    color: #656262;
+    font-size: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.courseSearch .sortOption .sortBox{
+    width: 30%;
+    height: 40px;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #656262;
+    border: 1px solid #ccc; /* Optional: adds a border around the input */
+    border-radius: 10px;
+    background-color: rgba(226, 232, 240, 0.864);
+}
