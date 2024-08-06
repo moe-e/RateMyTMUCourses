@@ -4,7 +4,7 @@
     left: 50%;
     width: 400px;
     padding: 40px;
-    margin: 20px auto;
+    margin: auto auto;
     transform: translate(-50%, -55%);
     background:#282936dd;
     box-sizing: border-box;
@@ -12,6 +12,7 @@
     border-radius: 10px;
   }
   
+
   .login-box p:first-child {
     margin: 0 0 30px;
     padding: 0;

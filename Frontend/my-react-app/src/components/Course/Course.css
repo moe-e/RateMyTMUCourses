@@ -1,0 +1,121 @@
+.courseComponenet{
+    display: flex;
+    flex-direction: column;
+}
+
+.courseBox{
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 7px;
+    padding-bottom: 10px;
+    padding-top:10px;
+    gap: 80px;
+}
+
+.courseMain{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.favouriteButtonOff{
+    background: rgb(123, 122, 122);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 35px;
+    font-size: 14px;
+    color: #f5eded;
+    font-weight:500;
+    border-radius: 8px;
+}
+
+.favouriteButtonOn{
+    background: rgb(245, 11, 11);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 35px;
+    font-size: 14px;
+    color: #f5eded;
+    font-weight:500;
+    border-radius: 8px;
+}
+
+.courseMain .heart{
+    padding-right: 8px;
+    font-size: 15px;
+}
+
+.courseInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.courseInfo .numberAndLink{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+.courseInfo .courseNumber{
+    font-size: 35px;
+    color:rgb(31, 41, 55);
+}
+
+.courseInfo .courseTitle{
+    margin-top: -15px;
+    font-weight:500;
+    font-size: 25px;
+    color: #262626;
+}
+.courseInfo .courseDescription, .courseInfo .reviewCount{
+    color: #656262;
+    font-weight:500;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 700px;
+}
+
+.courseRating{
+    align-content:center;
+    font-size: 7px;
+    color: #484848;
+    letter-spacing: 1.5px;
+}
+
+.courseRating .rating {
+    margin-bottom: 30px;
+}
+
+.courseRating .difficulty h1{
+    height: 1px;
+}
+
+.courseRating .rating h1{
+    height: 1px;
+}
+
+.courseComponent .reviewComponent{
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 30px;
+}
+
+.reviewComponent .reviewsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reviewComponent .reviewBox{
+    max-height: 480px;
+}
+
+

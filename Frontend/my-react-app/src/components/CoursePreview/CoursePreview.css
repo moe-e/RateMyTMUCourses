@@ -22,3 +22,7 @@
     line-height: 22px;
 }
 
+.no-style-link {
+    text-decoration: none;
+    color: inherit;
+  }

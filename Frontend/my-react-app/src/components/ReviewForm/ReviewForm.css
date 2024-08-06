@@ -1,0 +1,82 @@
+.formContainer{
+    background-color: white;
+    font-size: 5px;
+}
+
+.formContainer .title{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(31, 41, 55);
+
+}
+
+.formContainer .description{
+    text-align: center;
+    font-size: 12px;
+    color: #656262;
+    font-weight:400;
+}
+
+.formContainer .submit{
+    display: flex;
+    justify-content: center;
+}
+
+.formContainer .submit button{
+    height:35px;
+    width: 150px;
+    background-color: #282936;
+    color: rgb(255, 255, 255);
+    border-radius: .3rem;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.15s ease;
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.formContainer .questions{
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 7px;
+    color: #484848;
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.formContainer .questions .rating{
+    display: flex;
+    gap: 32px;
+}
+
+.formContainer .questions .difficulty{
+    display: flex;
+    gap: 16px;
+}
+
+.formContainer .questions .review, .formContainer .questions .professorInput{
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+}
+
+.formContainer .questions .review textarea{
+    resize: vertical;
+    overflow: auto; 
+    font-size: 14px;
+    padding: 5px 5px 5px 10px;
+    min-height: 30px;
+
+}
+
+.formContainer .questions .professorInput textarea{
+    resize: none;
+    padding: 5px 5px 5px 10px;
+    height: 16px;
+    font-size: 14px;
+}

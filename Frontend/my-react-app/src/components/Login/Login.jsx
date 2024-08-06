@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 
 function Login () {
     return (
-        
         <div class="login-box">
             <p>Login</p>
             <form>

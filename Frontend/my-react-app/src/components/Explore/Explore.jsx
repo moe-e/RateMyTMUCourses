@@ -1,9 +1,32 @@
 import './Explore.css'
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faRemove} from '@fortawesome/free-solid-svg-icons';
-import CoursePreview from '../CoursePreview/CoursePreview';
+import CoursePreview from '../CoursePreview/CoursePreview.jsx';
+import Loader from '../Loader/Loader.jsx'
+
+const BASE_URL = 'https://localhost:7152/api'
 
 function Explore (){
+    const [courses, setCourses] = useState([])
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() =>{
+        const fetchCourses = async () =>{
+            const response = await fetch(`${BASE_URL}/Course`);
+            const courses = await response.json();
+            setCourses(courses);
+            setLoading(false);
+        };
+
+        fetchCourses();
+
+    }, [])
+
+    if (loading) {
+        return <Loader></Loader>
+    }
+
     return (
         <div className='explore'>
             <div className= 'header'>
@@ -35,20 +58,10 @@ function Explore (){
                 </div>
             </div>
 
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
-            <CoursePreview></CoursePreview>
 
-
+            {courses.map(course => {
+                return (<CoursePreview key={course.courseId} number={course.courseId} title={course.courseName} description={course.courseDescription}></CoursePreview>);
+            })}          
 
         </div>
     )

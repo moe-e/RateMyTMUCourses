@@ -6,6 +6,7 @@ import Explore from './components/Explore/Explore.jsx'
 import About from './components/About/About.jsx'
 import Login from './components/Login/Login.jsx'
 import Signup from './components/Signup/Signup.jsx'
+import Course from './components/Course/Course.jsx'
 import './index.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/course/:number" element={<Course/>} />
 
     </Routes>
     </>
