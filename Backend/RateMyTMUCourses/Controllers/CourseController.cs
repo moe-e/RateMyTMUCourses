@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RateMyTMUCourses.Data;
 using RateMyTMUCourses.Models;
 using RateMyTMUCourses.Services;
@@ -53,6 +54,25 @@ namespace RateMyTMUCourses.Controllers
         {
             _courseService.DeleteCourse(courseId);
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("search")]
+        public IActionResult Search([FromQuery] string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return Ok();
+            }
+
+            string queryLower = query.ToLower();
+
+            var courses = _courseService.GetCourses().ToList()
+                .Where(c =>
+                    c.CourseId.Replace(" ", "").ToLower().Contains(queryLower.Replace(" ", "")) ||
+                    c.CourseName.ToLower().Contains(queryLower)).ToList();
+
+            return Ok(courses);
         }
 
     }

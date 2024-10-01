@@ -8,13 +8,27 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+//Let only my frontend call this api
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod(); ;
+        });
+});
+
 // Add DbContext configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<CourseService>();
 builder.Services.AddTransient<ReviewService>();
-builder.Services.AddTransient<CourseScraperService>();
+builder.Services.AddTransient<UserService>();
+
+//builder.Services.AddTransient<CourseScraperService>();
 
 var app = builder.Build();
 
@@ -26,16 +40,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// To scrape and add courses to DB.
 //using (var scope = app.Services.CreateScope())
 //{
-//    var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
-//    scraperService.addCourses(); // Assuming this method is synchronous
+ //   var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
+  //  scraperService.addCourses(); // Assuming this method is synchronous
 //}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseCors();
 
 app.UseAuthorization();
 
