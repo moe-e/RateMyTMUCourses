@@ -1,23 +1,25 @@
-.coursePreview{
+/* Base styles for coursePreview component */
+
+.coursePreview {
     max-width: 600px;
     margin: 15px auto;
     background-color: white;
     border-radius: 10px;
-    padding-bottom: 10px;
-    padding-top:10px
+    padding: 10px 0; /* Combined padding-top and padding-bottom */
 }
 
-.coursePreview .courseTitle{
+.coursePreview .courseTitle {
     margin-left: 20px;
     margin-right: 17px;
-    font-weight:700;
+    font-weight: 700;
     font-size: 17px;
 }
-.coursePreview .courseDescription{
+
+.coursePreview .courseDescription {
     margin-left: 20px;
     margin-right: 17px;
     color: #656262;
-    font-weight:500;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
 }
@@ -25,4 +27,7 @@
 .no-style-link {
     text-decoration: none;
     color: inherit;
-  }
+}
+
+
+

@@ -15,7 +15,6 @@
     max-width: 800px;
     margin: 10px ;
     color:#282936dd;
-    /* This centers the div and maintains the top margin */
 }
 
 .aboutPage .titleHeader{
@@ -26,4 +25,73 @@
 .aboutPage .description{
     font-size: 20px;
     font-weight: 300;
+}
+
+.aboutPage .linkedIn{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color:#282936dd;
+    text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+    .aboutContainer{
+        margin-top: 20px;
+        line-height: 30px;
+    }
+
+    .aboutContainer .pageTitle{
+        font-size: 35px;
+    }
+
+    .aboutPage{
+        max-width: 90%;
+        margin: 5px;
+    }
+
+    .aboutPage .titleHeader{
+        font-size: 28px;
+    }
+
+    .aboutPage .description{
+        font-size: 18px;
+    }
+
+    .aboutPage .linkedIn{
+        font-size: 18px;
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    .aboutContainer{
+        margin-top: 15px;
+        line-height: 25px;
+        margin-left: 15px;
+    }
+
+    .aboutContainer .pageTitle{
+        font-size: 24px;
+    }
+
+    .aboutPage{
+        max-width: 95%;
+        margin: 5px;
+    }
+
+    .aboutPage .titleHeader{
+        font-size: 24px;
+    }
+
+    .aboutPage .description{
+        font-size: 16px;
+    }
+
+    .aboutPage .linkedIn{
+        font-size: 16px;
+    }
 }

@@ -1,36 +1,64 @@
 import Rating from '../Rating/Rating.jsx';
+import { useState, useEffect } from 'react';
 import './CourseReview.css'
 
-function CourseReview() {
-    return(
-        <div className="reviewBox">
-            <div className="reviewBoxHeader">
-                <h1>04/24/2024</h1>
+const BASE_URL = 'https://localhost:7152/api/Review/'
 
-                <div className='courseRating'>
-                    <div className='rating'>
-                        <h1>RATING</h1>
-                        <Rating currentValue={5} isReadOnly={true} fontSize={19}/>
+function CourseReview(props) {
+    const courseId = props.courseId;
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() =>{
+        const fetchReviews = async () => {
+            const response = await fetch(BASE_URL + courseId);
+            const reviews = await response.json();
+            setReviews(reviews);
+        };
+
+        fetchReviews();
+
+    }, [])
+
+    return (
+        <div>
+            {reviews.length > 0 ? (
+                reviews.map((review) => (
+                    <div className="reviewBox">
+                        <div className="reviewBoxHeader">
+                            <h1>{review.datePosted.split('T')[0]}</h1>
+
+                            <div className='courseRating'>
+                                <div className='rating'>
+                                    <h1>RATING</h1>
+                                    <Rating currentValue={review.quality} isReadOnly={true} fontSize={19}/>
+                                </div>
+
+                                <div className='difficulty'>
+                                    <h1>DIFFICULTY</h1>
+                                    <Rating currentValue={review.difficulty} isReadOnly={true} fontSize={19} />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="reviewText">
+                            {review.description}
+                        </div>
+
+                        <div className="professor">
+                            <h1>Professor:</h1>
+                            <h1 className='name'>{review.professorName}</h1>
+                        </div>
                     </div>
-                    
-                    <div className='difficulty'>
-                        <h1>DIFFICULTY</h1>
-                        <Rating currentValue={2} isReadOnly={true} fontSize={19} />
-                    </div>
-                </div>
-            </div>
-
-            <div className="reviewText">
-                this course was garbage. do not take do not do not domf oemrfoe meomr eormeomoefmdomfom
-            </div>
-
-            <div className="professor">
-                <h1>Professor:</h1>
-                <h1 className='name'>Bob Okay</h1>
-
-            </div>
+                ))
+            ) : (
+                <div className="emptyReviewBox"> No reviews available. Be the first to leave a review!</div>
+            )}
         </div>
-    )
+    );
+
+
+    
 }
 
 export default CourseReview;

@@ -92,3 +92,9 @@
     animation-delay: -0.1s;
   }
   
+  @media (max-width: 425px) {
+    .loader {
+      position: absolute;
+      left: 50%;
+    }
+  }

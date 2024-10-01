@@ -27,7 +27,34 @@
     font-size: 20px;
     padding-left: 70px; /* Provides space for the icon inside the input box */
     border: 1px solid #ccc; /* Optional: adds a border around the input */
-    border-radius: 20px;
+}
+
+input:focus {
+    outline: none;
+  }
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Set width of the searchBox container */
+    max-width: 800px;
+}
+
+.searchOption{
+    text-decoration: none;
+    max-width: 100%;
+    text-align: center;
+    border-left: 1px solid #ccc; /* Optional: adds a border around the input */
+    border-right: 1px solid #ccc; /* Optional: adds a border around the input */
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+
+.searchOption:hover{
+    background-color: rgb(255, 228, 228);
 }
 
 .searchIcon{
@@ -36,6 +63,8 @@
     color: #ccc; /* Color of the icon, adjust as needed */
     font-size:26px; 
 }
+
+
 
 @media (max-width: 1000px) {
     .title {
@@ -129,3 +158,24 @@ button {
    button:hover .button-text {
     color: #fff;
    }
+
+   @media (max-width: 420px) {
+    .container{
+        margin-left: 2%;
+    }
+    .container .dropdown .searchOption{
+        font-size: 12px;
+
+    }
+    .container .title{
+        margin-left: 12px;
+        font-size: 20px;
+    }
+    .searchBox input{
+        padding-left: 55px;
+        font-size: 15px;
+    }
+    .learn-more{
+        margin-left: 6%;
+    }
+}

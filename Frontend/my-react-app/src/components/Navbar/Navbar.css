@@ -34,6 +34,7 @@
     text-underline-offset: 5px;
 }
 
+
 .homeButton .image{
     width: 70px;
     height: auto;
@@ -43,7 +44,8 @@
 
 .rightSide{
     padding-right: 20px;
-    margin-left: 27px;
+    margin-left: 4px;
+    margin-top: 2px;
 }
 
 .darkMode {
@@ -77,3 +79,100 @@
     transform: scale(1.03);
 }
  
+.profile-icon {
+    color: #444343; /* Adjust color as needed */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.03);
+}
+
+
+.hamburger-menu {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.menu-bar div {
+    background-color: #454444;
+    height: 3px;
+    width: 100%;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.tabs {
+    position: fixed;        /* Fixes the div relative to the viewport */
+    top: 0;                 /* Aligns to the top */
+    right: 0;               /* Aligns to the right */
+    display: flex;
+    flex-direction: column;
+    z-index: 10;            /* Ensures it appears above other elements */
+    background-color: white;
+    width: 100%;           /* Adjusted width for better responsiveness */
+    height: 100vh;          /* Full viewport height */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow for depth */
+    overflow-y: auto;       /* Allows scrolling if content exceeds viewport height */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sliding effect */
+    transform: translateX(0); /* Initially visible */
+}
+
+.tabOptions{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+}
+
+/* Optional: Slide out when menu is closed */
+.tabs.closed {
+    transform: translateX(100%);
+}
+
+.tabOptions .option{
+    color:#282828dd;
+    text-decoration: none;
+    text-align: left;
+    margin-top: 5px;
+    padding-left: 40px;
+}
+
+.tabOptions .option h1{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+
+}
+    
+.tabOptions .option:hover {
+     cursor: pointer;
+     background-color: rgb(236, 236, 236);
+}
+
+.close-button{
+    position: fixed;
+    margin-top: 20px;
+    right: 0;
+    margin-right: 20px;   
+    color:#282936dd;
+    /* Fixes the div relative to the viewport */
+}
+
+
+@media (max-width: 600px) {
+    .homeButton .image{
+        width: 55px;
+        padding-left: 3px;
+    }
+}

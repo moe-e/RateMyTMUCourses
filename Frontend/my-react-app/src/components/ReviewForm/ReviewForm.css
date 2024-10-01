@@ -78,5 +78,43 @@
     resize: none;
     padding: 5px 5px 5px 10px;
     height: 16px;
-    font-size: 14px;
+    font-size: 13px;
+}
+
+.reviewDone{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50%;
+    color: #656262;
+}
+
+.submittedContainer{
+    height: 480px;
+}
+
+@media (max-width: 1050px) {
+    .formContainer .title {
+        max-width: 100%;
+        margin-left: 6%;
+
+    }
+    .formContainer .description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formContainer .description {
+        font-size: 13px;
+        max-width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .formContainer .description {
+        font-size: 13px;
+        max-width: 90%;
+        margin-left: 5%;
+    }
 }

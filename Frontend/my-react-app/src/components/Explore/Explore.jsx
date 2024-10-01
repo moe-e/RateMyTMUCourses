@@ -10,6 +10,7 @@ const BASE_URL = 'https://localhost:7152/api'
 function Explore (){
     const [courses, setCourses] = useState([])
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() =>{
         const fetchCourses = async () =>{
@@ -22,6 +23,25 @@ function Explore (){
         fetchCourses();
 
     }, [])
+
+    useEffect(() =>{
+        const filteredSearch = async () =>{
+            if (!searchTerm || searchTerm.trim() === '') {
+                fetchCourses();
+            }
+
+            else{
+                const response = await fetch(`${BASE_URL}/Course/search?query=${searchTerm}`);
+                const courses = await response.json();
+                setCourses(courses);
+            }
+         
+        };
+
+        filteredSearch();
+
+    }, [searchTerm])
+
 
     if (loading) {
         return <Loader></Loader>
@@ -37,7 +57,7 @@ function Explore (){
 
             <div className='searchingContainer'>
                 <div className='courseSearch'>
-                    <div className='sortOption'>    
+                    {/*<div className='sortOption'>    
                             <h1>Course Subject</h1>   
                             <div className='selector'>       
                                 <select className='sortBox'>
@@ -49,10 +69,13 @@ function Explore (){
                                 </button>
 
                             </div> 
-                    </div>
+                    </div>*/}
                     <div className = 'searchBox'>
                         <FontAwesomeIcon className="searchIcon" icon={faSearch} />
-                        <input type="text" placeholder="Search by course code or title"></input>
+                        <input type="text" placeholder="Search by course code or title" value={searchTerm}
+                             onChange={(e) => setSearchTerm(e.target.value)}>
+                        </input>
+                        
                     </div> 
                     
                 </div>

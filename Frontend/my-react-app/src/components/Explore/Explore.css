@@ -86,3 +86,9 @@
     border-radius: 10px;
     background-color: rgba(226, 232, 240, 0.864);
 }
+
+@media (max-width: 425px) {
+    .explore {
+      margin-left: 10%;
+    }
+  }

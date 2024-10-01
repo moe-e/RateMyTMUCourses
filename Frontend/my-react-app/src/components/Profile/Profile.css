@@ -1,0 +1,84 @@
+/* src/components/Profile/Profile.css */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    align-self: center;
+}
+
+
+.sectionHeader{
+    display: flex;
+    text-align: center;
+    color: rgba(40, 41, 54, 0.867);
+    align-items: center;
+    justify-content:center ;
+    gap: 8px;
+    font-size: 18px;
+    margin-bottom: -8px;
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.error-message {
+    color: red; /* Makes the text red */
+    background-color: #ffe6e6; /* Light red background for emphasis */
+    padding: 10px; /* Adds padding around the text */
+    border: 1px solid red; /* Red border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above the error message */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text */
+}
+
+.logout-button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 120px;
+    font-weight: 600;
+}
+
+.logout-button:hover {
+    background-color: #c70303;
+}
+
+.profileIcon {
+    color: #444343; /* Adjust color as needed */
+}
+
+
+
+
+

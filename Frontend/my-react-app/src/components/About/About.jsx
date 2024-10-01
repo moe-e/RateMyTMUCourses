@@ -10,11 +10,13 @@ function About (){
                 </h1>
                 <h1 className='titleHeader'>About us</h1>
                 <h1 className='description'>MyTMUCourses is a side project I started with the simple goal of helping TMU students pick courses. Many times
-                    students are confused on whether a course is worth taking and they may not be aware of its difficulty. For this reason, I wanted to integrat reviews
+                    students are confused on whether a course is worth taking and they may not be aware of its difficulty. For this reason, I wanted to integrate reviews
                     for each course to help students make a more-informed decision during their course selections.
                 </h1>
                 <h1 className='titleHeader'>Contact us</h1>
                 <h1 className='description'>If you have any questions or concerns, please don't hesitate to reach out to us.</h1>
+                <a className='linkedIn' href="https://www.linkedin.com/in/mohamad-e">LinkedIn</a>
+
             </div>
         </div>
     )

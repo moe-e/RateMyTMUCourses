@@ -46,6 +46,8 @@
     border-radius: 8px;
 }
 
+
+
 .courseMain .heart{
     padding-right: 8px;
     font-size: 15px;
@@ -118,4 +120,197 @@
     max-height: 480px;
 }
 
+/* Media Queries for Responsive Design */
 
+/* Tablet view (768px and below) */
+@media (max-width: 1050px) {
+    .courseComponent{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .courseBox{
+        flex-direction: column;
+        align-items: center;
+        max-width: 99%;
+        gap: 20px;
+    }
+
+    .courseInfo{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .courseInfo .courseNumber{
+        font-size: 25px;
+    }
+
+    .courseInfo .courseTitle{
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .courseInfo .courseDescription,
+    .courseInfo .reviewCount{
+        font-size: 15px;
+        max-width: 60%;
+    }
+
+    .courseMain{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .favouriteButtonOff,
+    .favouriteButtonOn{
+        font-size: 16px;
+        padding: 6px 8px;
+        width: 17%;
+        position: absolute;
+        top: 140px;
+        right: 22px;
+    }
+
+    .courseMain .heart{
+        font-size: 17px;
+    }
+
+    .courseRating{
+        font-size: 7px;
+        margin-bottom: 22px;
+    }
+
+    .courseComponent .reviewComponent{
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px auto;
+        width: 99%;
+    }
+
+    .reviewComponent .reviewsContainer,
+    .reviewComponent .reviewBox{
+        width: 99%;
+        margin: 5px auto;
+    }
+    
+
+    .reviewBox .reviewBoxHeader h1{
+        font-size: 12px;
+    }
+
+    .reviewBoxHeader .courseRating{
+        margin-left: -12px;
+    }
+
+    .formContainer .questions{
+        margin-right: 10px;
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    .courseComponent{
+        width: 100%;
+    }
+    .courseBox{
+        flex-direction: column;
+        max-width: 95%;
+        gap: 20px;
+    }
+
+    .courseInfo{
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .courseInfo .courseNumber{
+        font-size: 25px;
+    }
+
+    .courseInfo .courseTitle{
+        margin-top: 0px;
+        font-size: 18px;
+    }
+
+    .courseInfo .courseDescription,
+    .courseInfo .reviewCount{
+        font-size: 13px;
+        max-width: 90%;
+    }
+
+    .courseMain{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .favouriteButtonOff,
+    .favouriteButtonOn{
+        font-size: 12px;
+        padding: 6px 8px;
+        width: 17%;
+        position: absolute;
+        top: 135px;
+        right: 30px;
+    }
+
+    .courseMain .heart{
+        font-size: 12px;
+    }
+
+    .courseRating{
+        font-size: 7px;
+        margin-bottom: 22px;
+    }
+
+    .courseComponent .reviewComponent{
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px auto;
+    }
+
+    .reviewComponent .reviewsContainer
+    .reviewComponent .reviewBox{
+        max-width: 95%;
+        margin: 5px auto;
+    }
+
+    .reviewBox .reviewBoxHeader h1{
+        font-size: 12px;
+    }
+
+    .reviewBoxHeader .courseRating{
+        margin-left: -12px;
+    }
+
+    .formContainer .questions{
+        margin-right: 10px;
+    }
+
+    .formContainer .decription h1{
+        max-width: 80%;
+    }
+
+    .reviewsContainer .emptyReviewBox{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .courseComponent{
+        width: 111%;
+    }
+
+    .favouriteButtonOff,
+    .favouriteButtonOn{
+        font-size: 12px;
+        padding: 6px 8px;
+        width: 18%;
+        position: absolute;
+        top: 135px;
+        right: -10px;
+    }
+}

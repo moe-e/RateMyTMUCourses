@@ -9,6 +9,7 @@ import Loader from '../Loader/Loader.jsx';
 import ReviewForm from '../ReviewForm/ReviewForm.jsx'
 
 const BASE_URL = 'https://localhost:7152/api/Course/'
+const SAVEDCOURSES_URL = 'https://localhost:7152/api/User/courses/'
 
 function Course () {
     const params = useParams();
@@ -16,22 +17,64 @@ function Course () {
 
     const [course, setCourse] = useState();
     const [loading, setLoading] = useState(true);
-    const [value, setValue] = useState(null);
-
-
+    const [saveButton, setSaveButton] = useState(false)
+    const email = localStorage.getItem('email');
 
     useEffect(() =>{
         const fetchCourse = async () => {
             const response = await fetch(BASE_URL + courseId);
             const course = await response.json();
             setCourse(course);
+
+            if (email){
+                const response = await fetch(SAVEDCOURSES_URL + email);
+                const courses = await response.json();
+
+                if (courses.some(c => c.courseId === courseId)) {
+                    setSaveButton(true);
+                }
+            }
+
             setLoading(false);
         };
-
+        
         fetchCourse();
 
     }, [])
+    
+    const manageCourse = async () => {
+        const token = localStorage.getItem('token');
 
+        if (!saveButton){
+            if (token) {
+
+                await fetch(SAVEDCOURSES_URL + email + '/' + courseId, {
+                    method: 'POST',  
+                    headers: {
+                        'Content-Type': 'application/json'  
+                    }
+                });
+                
+                setSaveButton(true)
+            }
+            else{
+                alert("You need to be logged in to perform this action.")
+            }
+        }
+
+        else{
+            await fetch(SAVEDCOURSES_URL + email + '/' + courseId, {
+                method: 'DELETE',  
+                headers: {
+                    'Content-Type': 'application/json'  
+                }
+            });
+
+            setSaveButton(false)
+        }
+
+    }
+    
     if (loading){
         return <Loader></Loader>
     }
@@ -43,10 +86,18 @@ function Course () {
                 <div className='courseInfo'>
                     <div className='courseMain'>
                         <h1 className='courseNumber'>{course.courseId}</h1>
-                        <button className='favouriteButtonOff'>   
-                            <FontAwesomeIcon className='heart' icon={faHeart}></FontAwesomeIcon>
-                            Unsave
-                        </button>
+                        {!saveButton ? (
+                            <button className='favouriteButtonOff' onClick={() => manageCourse()}>   
+                                <FontAwesomeIcon className='heart' icon={faHeart}></FontAwesomeIcon>
+                                Save
+                            </button>
+                        ): 
+                            (<button className='favouriteButtonOn' onClick={() => manageCourse()}>   
+                                <FontAwesomeIcon className='heart' icon={faHeart}></FontAwesomeIcon>
+                                Unsave
+                            </button>
+                            )
+                        }
                     </div>
                     <h1 className='courseTitle'>{course.courseName}</h1>
                     <h1 className='courseDescription'>{course.courseDescription}</h1>
@@ -56,12 +107,12 @@ function Course () {
                 <div className='courseRating'>
                     <div className='rating'>
                         <h1>RATING</h1>
-                        <Rating currentValue={5} isReadOnly={true} />
+                        <Rating currentValue={course.courseRating} isReadOnly={true} />
                     </div>
                     
                     <div className='difficulty'>
                         <h1>DIFFICULTY</h1>
-                        <Rating currentValue={2} isReadOnly={true} />
+                        <Rating currentValue={course.courseDifficulty} isReadOnly={true} />
                     </div>
                 </div>
 
@@ -69,22 +120,15 @@ function Course () {
 
             <div className='reviewComponent'>
                 <div className='reviewsContainer'>
-                    <CourseReview/>
-                    <CourseReview/>
-                    <CourseReview/>
-                    <CourseReview/>
-
+                    <CourseReview courseId={course.courseId}/>
                 </div>
 
                 <div className='reviewBox'>
-                    <ReviewForm/>
+                    <ReviewForm courseId={course.courseId}/>
                 </div>
 
             </div>
             
-
-            
-    
         </div>
     )
 }
