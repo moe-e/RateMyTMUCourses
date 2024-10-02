@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
 
 // Add DbContext configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
 builder.Services.AddTransient<CourseService>();
 builder.Services.AddTransient<ReviewService>();
