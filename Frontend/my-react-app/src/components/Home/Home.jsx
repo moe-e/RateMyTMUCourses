@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { useState, useEffect, useRef  } from 'react';
 import './Home.css'
 
-const BASE_URL = 'https://localhost:7152/api'
+const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api'
 
 function Body (){
     const [courses, setCourses] = useState()
