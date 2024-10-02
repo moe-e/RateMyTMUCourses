@@ -8,8 +8,8 @@ import CourseReview from '../CourseReview/CourseReview.jsx'
 import Loader from '../Loader/Loader.jsx';
 import ReviewForm from '../ReviewForm/ReviewForm.jsx'
 
-const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Course/'
-const SAVEDCOURSES_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/courses/'
+const BASE_URL = 'http://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Course/'
+const SAVEDCOURSES_URL = 'http://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/courses/'
 
 function Course () {
     const params = useParams();

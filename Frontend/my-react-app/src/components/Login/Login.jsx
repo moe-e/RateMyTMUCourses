@@ -2,7 +2,7 @@ import './Login.css';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/login'
+const BASE_URL = 'http://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/login'
 
 function Login() {
     const [email, setEmail] = useState('');

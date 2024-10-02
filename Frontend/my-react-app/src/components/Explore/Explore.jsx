@@ -5,7 +5,7 @@ import { faSearch, faRemove} from '@fortawesome/free-solid-svg-icons';
 import CoursePreview from '../CoursePreview/CoursePreview.jsx';
 import Loader from '../Loader/Loader.jsx'
 
-const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api'
+const BASE_URL = 'http://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api'
 
 function Explore (){
     const [courses, setCourses] = useState([])
