@@ -2,7 +2,7 @@ import './ReviewForm.css'
 import { useState, useEffect } from 'react';
 import Rating from '../Rating/Rating'
 
-const BASE_URL = 'http://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Review'
+const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Review'
 
 function ReviewForm(props){
     const [submitted, setSubmitted] = useState(false);
