@@ -2,7 +2,7 @@ import './Signup.css';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/register'; // Updated to sign-up endpoint
+const BASE_URL = 'https://www.mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/register'; // Updated to sign-up endpoint
 
 function Signup() {
     const [email, setEmail] = useState('');
