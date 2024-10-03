@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CoursePreview from '../CoursePreview/CoursePreview.jsx';
 import { FaUserCircle, FaHeart } from 'react-icons/fa'; // Importing user profile icon
 
-const BASE_URL = 'https://www.mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/courses/'
+const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/User/courses/'
 
 
 function Profile() {

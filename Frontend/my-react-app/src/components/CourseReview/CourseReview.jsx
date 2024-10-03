@@ -2,7 +2,7 @@ import Rating from '../Rating/Rating.jsx';
 import { useState, useEffect } from 'react';
 import './CourseReview.css'
 
-const BASE_URL = 'https://www.mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Review/'
+const BASE_URL = 'https://mytmucourses-env.eba-b2fnzzy2.ca-central-1.elasticbeanstalk.com/api/Review/'
 
 function CourseReview(props) {
     const courseId = props.courseId;
