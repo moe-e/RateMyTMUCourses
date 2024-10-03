@@ -142,5 +142,6 @@
   .login-box,
   .signup-box {
     width: 90%;
+    margin-top: 50px;
   }
 }

@@ -73,3 +73,10 @@
 .reviewBox .professor .name{
     font-weight: 506;
 }
+
+@media (max-width: 420px) {
+    .emptyReviewBox{
+        width: 83%;
+        text-align: center;
+    }
+}

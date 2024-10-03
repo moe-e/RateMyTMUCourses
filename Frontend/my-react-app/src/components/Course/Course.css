@@ -301,7 +301,7 @@
 
 @media (max-width: 400px) {
     .courseComponent{
-        width: 111%;
+        width: 100%;
     }
 
     .favouriteButtonOff,
@@ -311,6 +311,6 @@
         width: 18%;
         position: absolute;
         top: 135px;
-        right: -10px;
+        right: 25px;
     }
 }
