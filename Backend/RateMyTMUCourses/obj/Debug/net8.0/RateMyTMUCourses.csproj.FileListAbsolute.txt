@@ -27,7 +27,13 @@ C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -41,6 +47,8 @@ C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\WebDriver.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\Melha\OneDrive\Documents\RateMyTMUCourses\Backend\RateMyTMUCourses\bin\Debug\net8.0\System.Composition.AttributedModel.dll

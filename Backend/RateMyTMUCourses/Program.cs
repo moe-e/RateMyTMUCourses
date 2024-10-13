@@ -22,13 +22,13 @@ builder.Services.AddCors(options =>
 
 // Add DbContext configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
 
 builder.Services.AddTransient<CourseService>();
 builder.Services.AddTransient<ReviewService>();
 builder.Services.AddTransient<UserService>();
 
-//builder.Services.AddTransient<CourseScraperService>();
+// builder.Services.AddTransient<CourseScraperService>();
 
 var app = builder.Build();
 
@@ -41,10 +41,10 @@ if (!app.Environment.IsDevelopment())
 }
 
 // To scrape and add courses to DB.
-//using (var scope = app.Services.CreateScope())
+// using (var scope = app.Services.CreateScope())
 //{
- //   var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
-  //  scraperService.addCourses(); // Assuming this method is synchronous
+//    var scraperService = scope.ServiceProvider.GetRequiredService<CourseScraperService>();
+//   scraperService.addCourses(); // Assuming this method is synchronous
 //}
 
 app.UseHttpsRedirection();
