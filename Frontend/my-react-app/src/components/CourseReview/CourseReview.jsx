@@ -2,7 +2,7 @@ import Rating from '../Rating/Rating.jsx';
 import { useState, useEffect } from 'react';
 import './CourseReview.css'
 
-const BASE_URL = 'https://mytmucourses.ca/api/Review/'
+const BASE_URL = 'https://mytmucourses.onrender.com/api/Review/'
 
 function CourseReview(props) {
     const courseId = props.courseId;

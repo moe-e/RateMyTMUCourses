@@ -5,7 +5,7 @@ import { faSearch, faRemove} from '@fortawesome/free-solid-svg-icons';
 import CoursePreview from '../CoursePreview/CoursePreview.jsx';
 import Loader from '../Loader/Loader.jsx'
 
-const BASE_URL = 'https://mytmucourses.ca/api'
+const BASE_URL = 'https://mytmucourses.onrender.com/api'
 
 function Explore (){
     const [courses, setCourses] = useState([])

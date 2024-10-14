@@ -2,7 +2,7 @@ import './Login.css';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const BASE_URL = 'https://mytmucourses.ca/api/User/login'
+const BASE_URL = 'https://mytmucourses.onrender.com/api/User/login'
 
 function Login() {
     const [email, setEmail] = useState('');

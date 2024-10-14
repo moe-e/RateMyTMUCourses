@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CoursePreview from '../CoursePreview/CoursePreview.jsx';
 import { FaUserCircle, FaHeart } from 'react-icons/fa'; // Importing user profile icon
 
-const BASE_URL = 'https://mytmucourses.ca/api/User/courses/'
+const BASE_URL = 'https://mytmucourses.onrender.com/api/User/courses/'
 
 
 function Profile() {
