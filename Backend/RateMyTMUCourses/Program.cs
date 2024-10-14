@@ -21,11 +21,8 @@ builder.Services.AddCors(options =>
 });
 
 // Add DbContext configuration
-// builder.Services.AddDbContext<AppDbContext>(options =>
-// options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionStrings__Database")));
+ builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
 
 builder.Services.AddTransient<CourseService>();
 builder.Services.AddTransient<ReviewService>();
