@@ -47,7 +47,7 @@ if (!app.Environment.IsDevelopment())
 //   scraperService.addCourses(); // Assuming this method is synchronous
 //}
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
