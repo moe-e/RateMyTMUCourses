@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:ratemytmucourses.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CEAE3EA-6684-475A-8412-33F2208DD89E}|RateMyTMUCourses.csproj|c:\\users\\melha\\onedrive\\documents\\ratemytmucourses\\backend\\ratemytmucourses\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,21 +89,12 @@
               "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RateMyTMUCourses",
-              "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
-              "RelativeDocumentMoniker": "RateMyTMUCourses.csproj",
-              "ToolTip": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
-              "RelativeToolTip": "RateMyTMUCourses.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-13T22:50:22.729Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -111,16 +102,11 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-10-13T22:35:23.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-10-13T22:35:23.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Course.cs",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Models\\Course.cs",
               "RelativeDocumentMoniker": "Models\\Course.cs",
@@ -128,38 +114,35 @@
               "RelativeToolTip": "Models\\Course.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T04:51:13.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T04:51:13.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T01:03:48.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T01:03:48.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-29T18:48:50.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T18:48:50.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
@@ -167,21 +150,32 @@
               "RelativeToolTip": "Controllers\\ReviewController.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:24:03.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T19:24:03.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CourseController.cs",
               "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
               "ToolTip": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\Controllers\\CourseController.cs",
               "RelativeToolTip": "Controllers\\CourseController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T04:43:43.736Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RateMyTMUCourses.csproj",
+              "DocumentMoniker": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
+              "RelativeDocumentMoniker": "RateMyTMUCourses.csproj",
+              "ToolTip": "C:\\Users\\Melha\\OneDrive\\Documents\\RateMyTMUCourses\\Backend\\RateMyTMUCourses\\RateMyTMUCourses.csproj",
+              "RelativeToolTip": "RateMyTMUCourses.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-13T22:50:22.729Z"
             },
             {
               "$type": "Document",
@@ -290,6 +284,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T04:15:31.998Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",

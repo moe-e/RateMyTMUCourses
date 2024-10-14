@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173", "https://rate-my-tmu-courses.vercel.app")
+            policy.WithOrigins("http://localhost:5173", "https://rate-my-tmu-courses.vercel.app", "https://www.mytmucourses.ca")
                 .AllowAnyHeader()
                 .AllowAnyMethod(); ;
         });
