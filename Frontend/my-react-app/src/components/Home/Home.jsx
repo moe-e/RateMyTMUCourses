@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { useState, useEffect, useRef  } from 'react';
 import './Home.css'
 
-const BASE_URL = "https://mytmucourses.onrender.com/api"
+const BASE_URL = "https://mytmucourses.ca/api"
 
 function Body (){
     const [courses, setCourses] = useState()

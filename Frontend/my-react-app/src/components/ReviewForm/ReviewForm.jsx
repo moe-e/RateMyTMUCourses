@@ -2,7 +2,7 @@ import './ReviewForm.css'
 import { useState, useEffect } from 'react';
 import Rating from '../Rating/Rating'
 
-const BASE_URL = 'https://mytmucourses.onrender.com/api/Review'
+const BASE_URL = 'https://mytmucourses.ca/api/Review'
 
 function ReviewForm(props){
     const [submitted, setSubmitted] = useState(false);
