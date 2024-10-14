@@ -25,6 +25,15 @@ namespace RateMyTMUCourses.Controllers
             return Ok(courses);
         }
 
+
+        [HttpGet]
+        [Route("test")]
+
+        public ActionResult<ICollection<Course>> GetCourses2()
+        {
+            return Ok("lol");
+        }
+
         [HttpGet]
         [Route("{courseId}")]
         public ActionResult<ICollection<Course>> GetCourse(string courseId)
